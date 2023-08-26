@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HistoryFragment">
+
+    <TextView
+        android:id="@+id/historyFragmentPending"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:fontFamily="@font/sung_regular"
+        android:text="Pending Order"
+        android:padding="4dp"
+        android:background="@drawable/shape"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/historyFragmentCompleted"
+        android:layout_width="100dp"
+        android:layout_height="30sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/shape"
+        android:fontFamily="@font/sung_regular"
+        android:padding="4dp"
+        android:text="Completed Order"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyFragmentPending"
+        app:layout_constraintStart_toEndOf="@+id/historyFragmentPending"
+        app:layout_constraintTop_toTopOf="@+id/historyFragmentPending" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyFragmentRecycleView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragmentPending" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
